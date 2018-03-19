@@ -1,19 +1,20 @@
-## Arquivos estáticos no Django
+## Static files in Django
 
-Finalmente nós iremos ver mais de perto nessas coisas que chamamos de __arquivos estáticos__. Arquivos estáticos são todas as suas imagens e arquivos CSS -- arquivos que não são dinâmicos, então seu conteúdo não depende do contexto da requisição e será o mesmo para todos os usuários.
+Finally we will take a closer look at these things we've been calling __static files__. Static files are all your CSS and images -- files that are not dynamic, therefore their content doesn't depend on the request context and will be the same for every user.
 
-### Onde colocar os arquivos estáticos para Django
+### Where to put static files for Django
 
-Django já sabe onde encontrar os arquivos estáticos para o app padrão "admin". Agora só precisamos adicionar alguns arquivos estáticos para nosso próprio app, `blog`.
+Django already knows where to find the static files for the built-in "admin" app. Now we just need to add some static files for our own app, `blog`.
 
-Fazemos isso através da criação de uma pasta chamada `static` dentro do aplicativo do blog:
+We do that by creating a folder called `static` inside the blog app:
 
+```
     afropython
     ├── blog
     │   ├── migrations
     │   ├── static
     │   └── templates
     └── mysite
+```
 
-
-Django encontrará automaticamente todas as pastas chamadas "static" dentro de qualquer uma das pastas dos seus apps, e será capaz de usar seu conteúdo como arquivos estáticos.
+Django will automatically find any folders called "static" inside any of your apps' folders, and it will be able to use their contents as static files.
