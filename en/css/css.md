@@ -1,9 +1,9 @@
-# CSS - Deixe tudo mais bonito!
+# CSS – make it pretty!
 
-Nosso blog ainda parece feio, certo? Está na hora de deixar ele melhor! Para isso nós usaremos o CSS.
+Our blog still looks pretty ugly, right? Time to make it nice! We will use CSS for that.
 
-## O que é CSS?
+## What is CSS?
 
-Do inglês ```"Cascading Style Sheets"```(Folhas de estilo), CSS é uma linguagem usada para descrever o aspecto e a formatação de um website escrito numa linguagem de marcação (como HTML). Imagine ele como sendo um tipo de "maquiagem" para nosso site ;).
+```Cascading Style Sheets``` (CSS) is a language used for describing the look and formatting of a website written in a markup language (like HTML). Treat it as make-up for our web page. ;)
 
-Mas nós não queremos iniciar do zero de novo, certo? Mais uma vez, nós iremos usar algo que foi feito por programadores e disponibilizado de graça na internet. Você sabe, reinventar a roda não é nada divertido.
+But we don't want to start from scratch again, right? Once more, we'll use something that programmers released on the Internet for free. Reinventing the wheel is no fun, you know.
