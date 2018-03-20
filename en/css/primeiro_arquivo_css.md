@@ -1,49 +1,52 @@
-## Seu primeiro arquivo CSS!
+## Your first CSS file!
 
-Vamos criar um arquivo CSS agora, para adicionar seu próprio estilo para sua página da web. Crie um novo diretório chamado `css` dentro de seu diretório `static`. Em seguida, crie um novo arquivo chamado `blog.css` dentro do diretório `css`. Pronto?
+Let's create a CSS file now, to add your own style to your web page. Create a new directory called `css` inside your `static` directory. Then create a new file called `blog.css` inside this `css` directory. Ready?
 
+```
     afropython
     └─── blog
          └─── static
               └─── css
                    └─── blog.css
+```
 
+Time to write some CSS! Open up the `static/css/blog.css` file in your code editor.
 
-Hora de escrever CSS! Abra o arquivo `static/css/blog.css` no seu editor de código.
+We won't be going too deep into customizing and learning about CSS here. There is a recommendation for a free CSS course at the end of this page if you would like to learn more. 
 
-Não vamos nos aprofundar muito em customizar e aprender sobre CSS aqui, porque você pode aprender sozinho(a) após esta oficina. Tem uma recomendação de um curso gratuito para aprender mais no final da página.
+But let's do at least a little. Maybe we could change the color of our header?
+To understand colors, computers use special codes. These codes start with `#` followed by 6 letters (A–F) and numbers (0–9). For example, the code for blue is `#0000FF`. You can find the color codes for many colors here: http://www.colorpicker.com/. You may also use [predefined colors](http://www.w3schools.com/colors/colors_names.asp), such as `red` and `green`.
 
-Mas vamos fazer pelo menos um pouco. Talvez possamos mudar a cor do nosso cabeçalho? Para entender sobre cores, computadores usam códigos especiais. Eles começam com `#` e são seguidos por 6 letras (A-F) e números (0-9). Por exemplo, o código para azul é `#0000FF`. Você pode encontrar vários exemplos de códigos de cores aqui: http://www.colorpicker.com/. Você pode também usar [cores predefinidas](http://www.w3schools.com/colors/colors_names.asp), como `vermelho - red` e `verde - green`.
+In your `blog/static/css/blog.css` file you should add the following code:
 
-Em seu arquivo `blog/static/css/blog.css` você deve adicionar o seguinte código:
-
-blog/static/css/blog.css
+{% filename %}blog/static/css/blog.css{% endfilename %}
 ```css
 h1 a {
     color: #DA691A;
 }
 ```
 
-`h1 a` é um seletor de CSS. Isso significa que nós estamos aplicando nossos estilos para qualquer elemento `a` dentro de um elemento `h1`. Então quando tivermos no código algo como `<h1><a href="">link</a></h1>`, o estilo `h1 a` será aplicado. Neste caso nós estamos dizendo para mudar a cor para `#DA691A`, que é laranja. Claro, você pode colocar a cor que você quiser aqui!
+`h1 a` is a CSS Selector. This means we're applying our styles to any `a` element inside of an `h1` element. So when we have something like `<h1><a href="">link</a></h1>`, the `h1 a` style will apply. In this case, we're telling it to change its color to `#FCA205`, which is orange. Of course, you can put your own color here!
 
-Em um arquivo CSS podemos determinar estilos para elementos no arquivo HTML. A primeira maneira de identificar elementos é pelo nome do elemento. Você deve lembrar dessas tags na seção de HTML. Coisas como `a`, `h1` e  `body` são todas exemplos de nomes de elementos. Nós também identificamos elementos pelo atributo `class` ou o atributo `id`. Classe e identificador(id) são nomes que você mesmo dá ao elemento. Classes definem grupos de elementos, e ids apontam para elementos específicos. Por exemplo, você poderia identificar a seguinte tag usando a tag `a`, a classe `link_externo`, ou o id `link_wikipedia_do_django`.
+In a CSS file we determine styles for elements in the HTML file. The first way we identify elements is with the element name. You might remember these as tags from the HTML section. Things like `a`, `h1`, and `body` are all examples of element names.
+We also identify elements by the attribute `class` or the attribute `id`. Class and id are names you give the element by yourself. Classes define groups of elements, and ids point to specific elements. For example, you could identify the following tag by using the tag name `a`, the class `external_link`, or the id `link_to_django_wiki`:
 
 ```html
 <a href="https://en.wikipedia.org/wiki/Django" class="link_externo" id="link_wikipedia_do_django">
 ```
 
-Você pode ler mais sobre [Seletores CSS em w3schools](http://www.w3schools.com/cssref/css_selectors.asp).
+You can read more about [CSS Selectors at w3schools](http://www.w3schools.com/cssref/css_selectors.asp).
 
-Então, precisamos também contar ao nosso template HTML que nós adicionamos um CSS. Abra o arquivo `blog/templates/blog/post_list.html` e adicione essa linha bem no início do mesmo:
+We also need to tell our HTML template that we added some CSS. Open the `blog/templates/blog/post_list.html` file and add this line at the very beginning of it:
 
-blog/templates/blog/post_list.html
+{% filename %}blog/templates/blog/post_list.html{% endfilename %}
 ```html
 {% load staticfiles %}
 ```
 
-Estamos apenas carregando arquivos estáticos aqui :). Agora, entre as tags `<head>` e `</head>`, depois dos links para os arquivos de CSS do Bootstrap, adicione esta linha:
+We're just loading static files here. :) Between the `<head>` and `</head>` tags, after the links to the Bootstrap CSS files, add this line:
 
-blog/templates/blog/post_list.html
+{% filename %}blog/templates/blog/post_list.html{% endfilename %}
 ```html
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 ```
