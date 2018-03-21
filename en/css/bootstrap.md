@@ -10,7 +10,7 @@ It was written by programmers who worked for Twitter. Now it's developed by volu
 
 To install Bootstrap, you need to add this to your `<head>` in your `.html` file:
 
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
+blog/templates/blog/post_list.html
 ```html
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">

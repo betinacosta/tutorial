@@ -19,7 +19,7 @@ To understand colors, computers use special codes. These codes start with `#` fo
 
 In your `blog/static/css/blog.css` file you should add the following code:
 
-{% filename %}blog/static/css/blog.css{% endfilename %}
+blog/static/css/blog.css
 ```css
 h1 a {
     color: #DA691A;
@@ -39,14 +39,14 @@ You can read more about [CSS Selectors at w3schools](http://www.w3schools.com/cs
 
 We also need to tell our HTML template that we added some CSS. Open the `blog/templates/blog/post_list.html` file and add this line at the very beginning of it:
 
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
+blog/templates/blog/post_list.html
 ```html
 {% load staticfiles %}
 ```
 
 We're just loading static files here. :) Between the `<head>` and `</head>` tags, after the links to the Bootstrap CSS files, add this line:
 
-{% filename %}blog/templates/blog/post_list.html{% endfilename %}
+blog/templates/blog/post_list.html
 ```html
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 ```
