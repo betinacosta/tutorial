@@ -51,28 +51,28 @@ blog/templates/blog/post_list.html
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 ```
 
-O navegador lê os arquivos na ordem que eles são informados, então nós temos que nos certificar que esse é o lugar certo. Senão, o código em nosso arquivo pode sobrescrever o código nos arquivos do Bootstrap. Só dissemos ao nosso template onde se encontra nosso arquivo CSS.
+The browser reads the files in the order they're given, so we need to make sure this is in the right place. Otherwise the code in our file may be overriden by code in Bootstrap files. We just told our template where our CSS file is located.
 
-Agora, seu arquivo deve ficar assim:
+Your file should now look like this:
 
 blog/templates/blog/post_list.html
 ```html
 {% load staticfiles %}
 <html>
     <head>
-        <title>Blog do AfroPython</title>
+        <title>AfroPython's Blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
         <div>
-            <h1><a href="/">Blog do AfroPython</a></h1>
+            <h1><a href="/">AfroPython's Blog</a></h1>
         </div>
 
         {% for post in posts %}
             <div>
-                <p>publicado em: {{ post.published_date }}</p>
+                <p>published: {{ post.published_date }}</p>
                 <h1><a href="">{{ post.title }}</a></h1>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
@@ -81,9 +81,9 @@ blog/templates/blog/post_list.html
 </html>
 ```
 
-OK, salve o arquivo e atualize o site!
+OK, save the file and refresh the site!
 
-![Blog com as cores do AfroPython](images/blog-com-cores-afropython.png)
+![Blog with AfroPython's color palette](images/blog-com-cores-afropython.png)
 
 Bom trabalho! Talvez a gente também queira dar um pouco de ar ao nosso site e aumentar a margem do lado esquerdo? Vamos tentar!
 
